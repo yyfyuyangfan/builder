@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scrt.demo.builder.dao.TestDao">
+
+	<select id="getAll" resultType="com.scrt.demo.builder.entity.TestEntity">
+		select * from ${tableEntity.tableName}
+	</select>
+	<insert id="add" parameterType="com.scrt.demo.builder.entity.TestEntity">
+		insert into ${tableName}values()
+	</insert>
+	<update id="update" parameterType="com.scrt.demo.builder.entity.TestEntity">
+		update name
+	</update>
+	
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from t1 where id=#{id}
+	</delete>
+</mapper>
